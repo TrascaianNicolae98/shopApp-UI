@@ -1,0 +1,13 @@
+<mat-form-field class="dropdown"
+                appearance="fill">
+  <mat-label>{{title}}</mat-label>
+  <mat-select  #nativeElement
+               (selectionChange)="onSelectionChange($event)"
+               (opened)="onOpened()"
+               [formControl]="formControl">
+    <mat-option *ngFor="let thingToShow of listOfThingsToShow"
+                [value]="thingToShow">
+      {{thingToShow}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

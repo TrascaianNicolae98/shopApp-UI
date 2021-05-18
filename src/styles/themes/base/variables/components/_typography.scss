@@ -1,0 +1,61 @@
+$roboto-font-path: '@angular/material/theming' !default;
+
+$base-font-size: 1rem;
+$base-letter-spacing: 0.5px;
+$base-line-height: 1.5;
+$base-margin: 0;
+
+$font-family: 'Candara', sans-serif;
+
+$text-size: (
+  'xs': (
+    font-size: .75rem // 12px
+  ),
+  'sm': (
+    font-size: .875rem // 14px
+  ),
+  'base': (
+    font-size: 1rem // 16px
+  ),
+  'md': (
+    font-size: 1.125rem // 18px
+  ),
+  'lg': (
+    font-size: 1.25rem // 20px
+  ),
+  'xl': (
+    font-size: 1.5rem // 24px
+  ),
+  'xxl': (
+    font-size: 2.625rem // 42px
+  ),
+  'xxxl': (
+    font-size: 3.125rem // 50px
+  )
+);
+
+@function font-size($size) {
+  @return map-get(map-get($text-size, $size), 'font-size');
+}
+
+$text-weight: (
+  'thin': (
+    font-weight: 100
+  ),
+  'light': (
+    font-weight: 300
+  ),
+  'regular': (
+    font-weight: 400
+  ),
+  'medium': (
+    font-weight: 500
+  ),
+  'bold': (
+    font-weight: 700
+  )
+);
+
+@function font-weight($weight) {
+  @return map-get(map-get($text-weight, $weight), 'font-weight');
+}

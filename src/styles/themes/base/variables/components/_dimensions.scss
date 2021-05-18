@@ -1,0 +1,43 @@
+/*** Default Values for Padding and Margins ***/
+
+$dim-none: 0;
+$dim-xs: 12px;
+$dim-sm: 14px;
+$dim-base: 16px;
+$dim-md: 18px;
+$dim-lg: 20px;
+$dim-xl: 24px;
+$dim-xxl: 30px;
+
+@function doubleDim($value) {
+  @return $value * 2;
+}
+
+@function tripleDim($value) {
+  @return $value * 3;
+}
+
+/*** Default Values for Width and Height ***/
+
+$dim-full: 100%;
+
+$dim-1-out-of-4: 25%;
+$dim-2-out-of-4: 50%;
+$dim-3-out-of-4: 75%;
+$dim-4-out-of-4: 100%;
+
+$dim-1-out-of-3: 33.33%;
+$dim-2-out-of-3: 66.67%;
+
+$dim-3-out-of-10: 30%;
+$dim-8-out-of-10: 80%;
+$dim-9-out-of-10: 90%;
+
+$dim-half-flex-margins: 47%;
+
+/*** SPECIFIC DIMENSIONS ***/
+$dim-toolbar: 64px;
+$dim-toolbar-icon: 24px;
+
+/*** Main header height  ***/
+$headerHeight: 64px;

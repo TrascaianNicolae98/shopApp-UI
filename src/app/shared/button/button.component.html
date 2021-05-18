@@ -1,0 +1,56 @@
+<div id="button">
+  <ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="'text'">
+      <ng-container *ngTemplateOutlet="text"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'icon'">
+      <ng-container *ngTemplateOutlet="icon"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'fab'">
+      <ng-container *ngTemplateOutlet="fab"></ng-container>
+    </ng-container>
+    <ng-container *ngSwitchCase="'textAndIcon'">
+      <ng-container *ngTemplateOutlet="textAndIcon"></ng-container>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #text>
+  <button class="buttn"
+          mat-raised-button
+          [color]="'primary'"
+          (click)="onClicked($event)"
+          [disabled]="isDisabled">
+    {{label}}
+  </button>
+</ng-template>
+
+<ng-template #icon>
+  <button mat-icon-button
+          [color]="color"
+          (click)="onClicked($event)"
+          [disabled]="isDisabled">
+    <mat-icon>
+      {{iconToShow}}
+    </mat-icon>
+  </button>
+</ng-template>
+<ng-template #fab>
+  <button mat-fab
+          color="{{color}}"
+          (click)="onClicked($event)"
+          [disabled]="isDisabled">
+    <ng-content></ng-content>
+  </button>
+</ng-template>
+<ng-template #textAndIcon>
+  <button mat-raised-button
+          color="{{color}}"
+          (click)="onClicked($event)"
+          [disabled]="isDisabled">
+    <mat-icon class="button-icon">
+      {{iconToShow}}
+    </mat-icon>
+    {{label}}
+  </button>
+</ng-template>

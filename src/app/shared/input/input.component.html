@@ -1,0 +1,44 @@
+<ng-container *ngIf="formControl; then formInput; else simpleInput"></ng-container>
+
+<ng-template #formInput>
+  <mat-form-field>
+    <mat-icon *ngIf="reactive" class="editIcon">edit</mat-icon>
+    <mat-icon *ngIf="isSearch" matSuffix class="search-icon">search</mat-icon>
+    <mat-icon *ngIf="prefixIcon" matPrefix>{{prefixIcon}}</mat-icon>
+    <input #nativeElem
+           matInput
+           [name]="id"
+           [type]="type"
+           [formControl]="formControl"
+           [placeholder]="label"
+           (input)="onChange($event)"
+           (blur)="onBlur()"
+           (keypress)="forceKeyPressUpperCase($event)"
+           [readonly]="isReadonly"
+           [required]="required ? '' : null"/>
+
+    <div class="step-arrow-wrapper" *ngIf="type === 'number'">
+      <div (mousedown)="$event.preventDefault()" (click)="stepUp()" class="step-up-arrow"></div>
+      <div (mousedown)="$event.preventDefault()" (click)="stepDown()" class="step-down-arrow"></div>
+    </div>
+    <mat-hint *ngIf="hintMessage">{{hintMessage}}</mat-hint>
+  </mat-form-field>
+</ng-template>
+
+<ng-template #simpleInput>
+  <input #nativeElem
+         matInput
+         [name]="id"
+         [type]="type"
+         [value]="value"
+         [placeholder]="label"
+         (input)="onChange($event)"
+         (blur)="onBlur()"
+         [readonly]="isReadonly"
+         [required]="required ? '' : null"/>
+  <mat-icon *ngIf="reactive" class="editIcon">edit</mat-icon>
+</ng-template>
+<app-form-error-list
+  *ngIf="showErrors"
+  [errorMap]="formControl.errors">
+</app-form-error-list>

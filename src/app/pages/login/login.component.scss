@@ -1,0 +1,76 @@
+:host{
+  .container {
+    background-color: #c6c8c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .center-card {
+    min-height:450px;
+    min-width: 250px;
+    height: 60%;
+    width: 20%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-inner-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: auto;
+
+    span{
+      font-size: xx-large;
+    }
+  }
+
+  .logo {
+    width: 25%;
+    height: auto;
+  }
+
+  .middle-inner-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: auto;
+    box-sizing: content-box;
+
+    ::ng-deep{
+      app-button{
+        button{
+          background-color: #4285F4;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .bottom-inner-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: auto;
+  }
+
+  .login-button {
+    color: white;
+    position: relative;
+  }
+
+  .bottom-image {
+    width:60%;
+    height: auto;
+    position: relative;
+  }
+}

@@ -1,0 +1,175 @@
+@import 'src/styles/main';
+
+:host::ng-deep {
+
+  .mat-form-field {
+    width: 100% !important;
+
+    input.mat-input-element {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      margin-bottom: 0;
+      height: 24px;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  input:-webkit-autofill:not(:active) {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+
+  input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid theme-color('accent', 'base');
+    box-shadow: 0 1px 0 0 theme-color('accent', 'base');
+  }
+
+  .step-arrow-wrapper + .mat-form-field-label-wrapper {
+    width: calc(100% - 18px);
+  }
+
+  // hide step buttons on Firefox
+  input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  // hide step buttons on Chrome/Safari
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  // workaround for Firefox bug where disabled number input with textfield appearance is still clickable
+  .mat-form-field.mat-form-field-disabled {
+    pointer-events: none;
+  }
+
+  // shorten the textbox to make room for step-arrow-wrapper
+  input[type=number] {
+    width: calc(100% - 18px);
+  }
+
+  // shorten the mat-label to make room for step-arrow-wrapper
+  // (doesn't work inside stackblitz but does work otherwise)
+  ::ng-deep .step-arrow-wrapper + .mat-form-field-label-wrapper {
+    width: calc(100% - 18px);
+  }
+
+  // place step-arrow-wrapper to the right of textbox
+  .step-arrow-wrapper {
+    float: right;
+    width: 18px;
+  }
+
+  // step arrow style made to match mat-select arrow
+  .step-up-arrow,
+  .step-down-arrow {
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin: 0 4px;
+  }
+
+  .step-up-arrow {
+    border-bottom: 5px solid;
+    margin-bottom: 5px;
+  }
+
+  .step-down-arrow {
+    border-top: 5px solid;
+  }
+
+  .search-icon {
+    color: theme-color('accent', 'dark');
+  }
+
+  ::ng-deep {
+
+    .mat-form-field-prefix {
+      color: theme-color('accent', 'base');
+      margin-right: 8px;
+    }
+  }
+
+}
+
+:host(.disabled) {
+  pointer-events: none;
+}
+
+
+:host::ng-deep {
+  .reactive {
+    .mat-form-field {
+      width: 100% !important;
+
+      .mat-form-field-underline {
+        display: none;
+      }
+
+      .mat-input-element {
+        border-bottom: none !important;
+        box-shadow: none !important;
+        margin-bottom: 0;
+        height: 24px;
+      }
+
+      .mat-form-field-infix {
+        border: 1px solid transparent;
+        display: flex;
+
+        .editIcon {
+          display: none;
+        }
+
+        &:hover {
+          border: 1px dashed theme-color('accent', 'base');
+
+          .editIcon {
+            color: theme-color('accent', 'dark');
+            display: inline;
+            width: auto;
+            height: 0.3rem;
+            margin-right: 2px;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+:host::ng-deep {
+  .editable {
+    .mat-form-field {
+      .mat-form-field-underline {
+        display: block;
+      }
+
+      .mat-form-field-subscript-wrapper {
+        display: none;
+      }
+
+
+      .mat-form-field-infix {
+        border: none;
+
+        .editIcon {
+          display: none;
+        }
+
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+}

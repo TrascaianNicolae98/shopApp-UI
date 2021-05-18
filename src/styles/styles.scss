@@ -1,0 +1,58 @@
+@import 'main';
+
+// Mask that covers the screen when a dialog is open
+.ui-dialog-mask {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.center-loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+
+body, pre {
+  font-family: $font-family !important;
+}
+
+span, label, button {
+  font-family: $font-family !important;
+}
+
+div {
+  font-family: $font-family !important;
+}
+
+pre {
+  font-weight: 500 !important;
+  font-size: 1.125rem !important;
+}
+
+
+.pending {
+  color: theme-color('status', 'gray');
+}
+
+.active {
+  color: theme-color('status', 'green');
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.no-items {
+  color: theme-color('primary', 'base');
+}
+
+.not-implemented {
+  color: theme-color('accent', 'base');
+  font-weight: font-weight('bold');
+}
+
+.custom-tooltip-blue {
+  font-size: larger;
+  background-color: grey !important;
+  color: #ffffff;
+}

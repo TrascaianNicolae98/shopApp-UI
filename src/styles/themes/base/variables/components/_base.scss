@@ -1,0 +1,65 @@
+// Breakpoints
+$bp-largest: 80em; // 1280px
+$bp-large: 1025px; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-medium-1: 768px;
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+$bp-smallest-1: 350px;
+
+
+.loading-indicator-container {
+  text-align: center;
+
+  .loading-indicator {
+    width: 60px;
+    height: auto;
+  }
+}
+
+.loading-card {
+  .left-side {
+    background-color: theme-color('status', 'gray');
+    animation: fade 2s linear 0s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fade {
+  0% {
+    background-color: theme-color('status', 'gray');
+  }
+
+  70% {
+    background-color: gray;
+  }
+
+  100% {
+    background-color: lightgray;
+  }
+}
+
+.height-100 {
+  height: 100%;
+}
+
+// In order to override the background color for the table header when you sort the column content
+.mat-sort-header-container {
+  button:focus {
+    background-color: transparent;
+  }
+}
+
+// TODO create a convenient way of calling using resolutions. When I target an iphopne 5, I don't really ant to know it's exact numeric width. Maybe something similar to theme-color ()?
+
+
+// RESOLUTIONS
+$max_mobile_width: 960px;
+
+// Iphone 5
+$iphone_5_width: 320px;
+$iphone_5_height: 568px;
+
+// Samsung Galaxy S5
+$samsung_S5_width: 360px;
+$samsung_S5_height: 640px;

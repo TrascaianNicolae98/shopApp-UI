@@ -1,0 +1,12 @@
+
+<span class="title">Your Shops</span>
+
+<app-mini-fab (clicked)="openDialogBox()"></app-mini-fab>
+<div class="container">
+<app-shop-card *ngFor="let shop of shops"
+               [id]="shop.id"
+               [name]="shop.name"
+               (clickDelete)="deleteShop($event)"
+               (clicked)="goToDetails($event)">
+</app-shop-card>
+</div>

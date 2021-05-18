@@ -1,0 +1,73 @@
+$theme-colors: (
+  'primary': (// Brand's Color
+    'base': #F2D4C9,
+    'light': #909296,
+    'lighter': #A6A6A6,
+    'dark': #66676A,
+    'disabled': #CB7E7E
+  ),
+  'secondary': (
+    'base': #BFA75F,
+    'light': #CCB366,
+    'lighter':#E8DFC5,
+    'dark': #A69153
+  ),
+  'accent': (// Brand's Secondary Color
+    'base': #F35D4F,
+    'light': #F67468,
+    'dark': #D95448,
+    'lighter': #F35D4F24,
+  ),
+  'text': (// Text
+    'base': #333333,
+    'light': #565656,
+    'lighter': #ACB0B8,
+    'lightest': #FFFFFF,
+  ),
+  'foreground': (// Objects with Darker Colors
+    'base': #424242,
+    'light': #616161,
+    'lighter': #757575,
+    'dark': #212121
+  ),
+  'background': (// Objects with Lighter Colors
+    'base': #F5F5F5,
+    'light': #FAFAFA,
+    'dark': #EEEEEE,
+    'darker': #E0E0E0,
+    'material': #FFFFFF
+  ),
+  'misc': (// Miscellaneous Colors
+    'error': #F44336,
+    'completed': #3d9970,
+    'paused': #FDB515,
+    'waiting': #FDB515,
+    'abacus': #B94047,
+    'link': #48A668,
+    'material': #FFFFFF
+  ),
+  'social': (// Social Icons
+    'google': #DD4B39,
+    'linkedin': #007BB5
+  ),
+  'rating': (
+    'empty': #dddddd,
+    'hover': #FFDF00,
+    'checked': #FDB515
+  ),
+  'status': (
+    'yellow': #ECE43C,
+    'green': #80e27e,
+    'gray': #838383,
+    'red': #d50000,
+    'orange': #f39c12
+  ),
+  'facebook': (
+    'base': #1877f2,
+    'light': #5890FF
+  )
+);
+
+@function theme-color($color, $variant) {
+  @return map-get(map-get($theme-colors, $color), $variant);
+}

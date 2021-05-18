@@ -1,0 +1,170 @@
+/*** Main Variables ***/
+@import 'variables/variables';
+
+// Padding & margin
+$dimen_form_element--margin: $dim-base;
+$diment_material--padding: $dim-base;
+
+//Text
+$dimnen_material--text: font-size('base');
+
+
+// THEMING OPTIONS
+$color_background: theme-color('background', 'base');
+$color_page--background: white;
+$dimen_font: font-weight('light');
+$color_background--gradient: linear-gradient(to right, #{theme-color('accent', 'light')}, #{theme-color('accent', 'base')});
+
+// TOOLBAR
+$dimen_toolbar--height: 64px;
+$dimen_toolbar_logo: doubleDim($dim-lg);
+$shadow_toolbar--elevation: theme-shadow('base');
+$color_toolbar: transparent;
+$color_toolbar_links: theme-color('text', 'light');
+$color_toolbar_links--active: theme-color('text', 'lightest');
+$color_toolbar_links--hover: theme-color('text', 'lightest');
+
+// TABS
+$dimen_tabs_link--height: $dim-full;
+$dimen_tabs_link--fontWeight: font-weight('bold');
+$color_tabs--background: theme-color('background', 'material');
+;
+$color_tabs_link--color: theme-color('primary', 'lighter');
+$color_tabs_link--hover: theme-color('accent', 'base');
+$color_tabs_link--active: theme-color('accent', 'base');
+$color_tabs_inkbar--background: theme-color('accent', 'base') !important;
+$shadow_tabs--elevation: none;
+
+
+// SIDEBAR
+$dimen_sidenav--width: 205px;
+$dimen_sidenav_icon--size: $dim-xl;
+$dimen_sidenav_icon--marginRight: doubleDim($dim-base);
+$dimen_sidenav_item--width: $dim-full;
+$dimen_sidenav_user--padding: $dim-md;
+$dimen_sidenav_user_avatar--radius: 50%;
+$dimen_sidenav_user_avatar--width: tripleDim($dim-lg);
+$color_sidenav_divider: theme-color('background', 'dark');
+$color_sidenav_item: theme-color('primary', 'base');
+$color_sidenav_item--selected: theme-color('accent', 'base');
+$color_sidenav_user--background: theme-color('primary', 'base');
+$color_sidenav_user--color: theme-color('foreground', 'dark');
+$color_sidenav_user_email--color: theme-color('misc', 'material');
+$color_sidenav_overlay--background: rgba(120, 120, 120, .3) !important;
+
+// MATERIAL
+$dimen_material_header--height: 64px;
+$dimen_material_header--fontSize: 20px;
+$dimen_material_header--fontSize-LG: font-size('lg') !important;
+$dimen_material_header--fontWeight: 700;
+$dimen_material_body--padding: doubleDim($dim_xl);
+$dimen_material_footer--height: 64px;
+$dimen_material--minWidth: 600px;
+$dimen_material--minHeight: 100%;
+$shadow_material_elevation_1: theme-shadow('base');
+$shadow_material_elevation_2: theme-shadow('elevation2');
+$color_material--background: theme-color('background', 'material');
+
+//WIZARD
+$dimen_wizard_header--fontSize: 2rem;
+$dimen_wizard_header--height: 50px;
+$dimen_wizard_header_step--size: 2rem;
+$color_wizard_header_step--color: white;
+$color_wizard_header_step_label--color: theme-color('foreground', 'lighter');
+$color_wizard_header_step_separator--backgroundColor: rgba(0, 0, 0, .1);
+$color_wizard_header_step--backgroundColor--inactive: theme-color('foreground', 'lighter');
+$color_wizard_header_step--backgroundColor--active: theme-color('accent', 'base');
+$color_wizard_header_step--backgroundColor--completed: theme-color('misc', 'completed');
+
+//FAB
+$dimen_fab--height: 64px;
+$dimen_fab--width: 64px;
+$dimen_fab--fontSize: 1.6rem;
+$dimen_fab_wrapper--lineHeight: 28px;
+$dimen_fab--lineHeight: 56px;
+$dimen_fab_position--right: 1rem;
+$dimen_fab_position--bottom: 1rem;
+$dimen_fab_icon--height: 28px;
+$dimen_fab_icon--width: 28px;
+$dimen_fab_icon--fontSize: 28px;
+$dimen_miniFab--height: 36px;
+$dimen_miniFab--width: 36px;
+$dimen_miniFab--lineHeight: 32px;
+$dimen_miniFab_wrapper--lineHeight: 20px;
+$dimen_miniFab_wrapper--padding: 0 0 8px;
+$dimen_miniFab_icon--height: 20px;
+$dimen_miniFab_icon--width: 20px;
+$dimen_miniFab_icon--fontSize: 20px;
+$dimen_miniFab_icon--lineHeight: 20px;
+$color_fab--color: white !important;
+$color_fab--background: theme-color('accent', 'base') !important;
+
+// Button
+$dimen_button--height: 42px;
+$dimen_button_border: none;
+$dimen_button_outline: none;
+$dimen_button--border-radius: 20px;
+$dimen_button--box-shadow: 0 3px 6px #00000029;
+$dimen_button--fontWeight: font-weight('bold');
+$dimen_button--fontSize: $dim-md;
+$color_button--background: theme-color('accent', 'base');
+$color_button--color: white;
+$color_button_simple--color: theme-color('accent', 'base');
+$color_button--background--hover: theme-color('accent', 'light');
+$color_button--background--active: theme-color('accent', 'dark');
+$color_button--simpleGray: #75777A;
+$color_button--simpleGreen: #48A668;
+
+
+//Back Button
+$dimen_backButton--size: doubleDim($dim_xl);
+$dimen_backButton_border--radius: 50px;
+$dimen_backButton_icon--size: doubleDim($dim-lg);
+$color_backButton--color: white;
+$color_backButton--background: theme-color('accent', 'base');
+
+//Picklist
+$color_picklist_item--color: theme-color('accent', 'base');
+
+
+// Alert
+$color_alert_background: theme-color('accent', 'base');
+$dimen_alert_icon: tripleDim($dim-md);
+
+// Separator
+$dimen_separator--height: 30px;
+$dimen_separator--radius: 50px;
+$color_separator--bullet: theme-color('accent', 'base');
+$color_separator--bullet--color: theme-color('text', 'light');
+$color_separator--text--color: theme-color('text', 'base');
+
+// Loading spinner
+$spinner-default-color: theme-color('accent', 'base');
+
+
+// SIDE PANEL
+$side-panel--width: 420px;
+$side-panel--background: white;
+$side-panel--padding: 72px 50px 60px 36px;
+$side-panel-drawer--borderTopLeftRadius: 30px;
+$side-panel-drawer--top: 48px;
+$side-panel-content--backgroundColor: transparent;
+$side-panel-content--boxShadow: theme-shadow('elevation4');
+$side-panel-content--borderRadius: 45px;
+
+// CARD COMPONENT
+$boarder-color: 3px solid forestgreen;
+
+html, body {
+  background-color: $color_background;
+  height: $dim-full;
+  width: $dim-full;
+  font-weight: $dimen_font;
+  letter-spacing: $base-letter-spacing;
+  line-height: $base-line-height;
+  margin: $base-margin;
+}
+
+
+
+

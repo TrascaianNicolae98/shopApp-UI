@@ -1,0 +1,24 @@
+<mat-form-field class="app-textarea"
+                (click)="enable()"
+                (blur)="onBlur()"
+                (focusout)="disable()">
+  <mat-label>{{label}}</mat-label>
+  <textarea matInput
+            #textarea
+            cdkTextareaAutosize
+            [cdkAutosizeMinRows]="minRows"
+            [cdkAutosizeMaxRows]="maxRows"
+            (blur)="onBlur()"
+            (mouseenter)="onMouseEnter()"
+            (mouseleave)="onMouseExit()"
+            [formControl]="formControl"
+            [rows]="maxRows"
+            [maxlength]="maxLength"
+            [placeholder]="placeholder"
+            [readonly]="isReadOnly">
+    </textarea>
+  <mat-hint *ngIf="hovered" align="end">{{textarea.value?.length || 0}}/{{maxLength}}</mat-hint>
+</mat-form-field>
+<app-form-error-list *ngIf="showErrors"
+                     [errorMap]="formControl.errors">
+</app-form-error-list>

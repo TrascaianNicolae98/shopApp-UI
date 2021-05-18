@@ -1,0 +1,16 @@
+<div class="top-container">
+  <app-button [type]="'text'" [label]="'Delete All Products'" (clicked)="deleteAllProducts()"></app-button>
+  <div class="title">{{this.shopDetails.shopName}}</div>
+  <app-button [type]="'text'" [label]="'Add Product'" (clicked)="openAddProductModal()"></app-button>
+
+</div>
+
+<div class="card-container">
+  <app-product-card *ngFor="let product of shopDetails?.products" [name]="product.name" [id]="product.id"
+                    [quantity]="product.quantity" (clickDelete)="deleteProduct($event)">
+  </app-product-card>
+</div>
+
+
+
+

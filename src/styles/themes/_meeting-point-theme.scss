@@ -1,0 +1,219 @@
+// THEMING OPTIONS
+
+// Material Components
+input:not([type]):focus:not([readonly]),
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=url]:not(.browser-default):focus:not([readonly]),
+input[type=time]:not(.browser-default):focus:not([readonly]),
+input[type=date]:not(.browser-default):focus:not([readonly]),
+input[type=datetime]:not(.browser-default):focus:not([readonly]),
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+input[type=tel]:not(.browser-default):focus:not([readonly]),
+input[type=number]:not(.browser-default):focus:not([readonly]),
+input[type=search]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid theme-color('primary', 'base');
+  box-shadow: 0 1px 0 0 theme-color('primary', 'base');
+}
+
+input.invalid:not([type]),
+input.invalid:not([type]):focus,
+input[type=text].invalid:not(.browser-default),
+input[type=text].invalid:not(.browser-default):focus,
+input[type=password].invalid:not(.browser-default),
+input[type=password].invalid:not(.browser-default):focus,
+input[type=email].invalid:not(.browser-default),
+input[type=email].invalid:not(.browser-default):focus,
+input[type=url].invalid:not(.browser-default),
+input[type=url].invalid:not(.browser-default):focus,
+input[type=time].invalid:not(.browser-default),
+input[type=time].invalid:not(.browser-default):focus,
+input[type=date].invalid:not(.browser-default),
+input[type=date].invalid:not(.browser-default):focus,
+input[type=datetime].invalid:not(.browser-default),
+input[type=datetime].invalid:not(.browser-default):focus,
+input[type=datetime-local].invalid:not(.browser-default),
+input[type=datetime-local].invalid:not(.browser-default):focus,
+input[type=tel].invalid:not(.browser-default),
+input[type=tel].invalid:not(.browser-default):focus,
+input[type=number].invalid:not(.browser-default),
+input[type=number].invalid:not(.browser-default):focus,
+input[type=search].invalid:not(.browser-default),
+input[type=search].invalid:not(.browser-default):focus,
+textarea.materialize-textarea.invalid,
+textarea.materialize-textarea.invalid:focus,
+.select-wrapper.invalid > input.select-dropdown {
+  border-bottom: 1px solid theme-color('primary', 'base');
+  box-shadow: 0 1px 0 0 theme-color('primary', 'base');
+}
+
+
+.mat-slide-toggle.mat-primary.mat-checked .mat-slide-toggle-thumb {
+  background-color: theme-color('accent', 'base') !important;
+}
+
+.mat-slide-toggle .mat-slide-toggle-ripple {
+}
+
+.ui-toast-message-success {
+  background-color: theme-color('accent', 'base');
+  color: white;
+}
+
+
+.ui-toast-close-icon {
+  color: white;
+}
+
+.ui-autocomplete-panel {
+  background-color: theme-color('background', 'base');
+}
+
+.btn-default {
+  background-color: theme-color('primary', 'base');
+}
+
+// TOASTS
+.toast {
+  word-break: keep-all;
+}
+
+// MODAL
+.modal-overlay {
+  background-color: lightgray !important;
+}
+
+@media only screen and (min-width: 993px) {
+  #toast-container {
+    top: 8%;
+    right: 3% !important;
+  }
+
+  .toast-info {
+    background-color: theme-color('accent', 'base');
+    box-shadow: none !important;
+  }
+
+  .toast-success {
+    box-shadow: none !important;
+  }
+
+}
+
+// Material styling
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  opacity: 0.03 !important;
+  background-color: theme-color('accent', 'base') !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: theme-color('accent', 'base');
+}
+
+::ng-deep {
+  .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+    background-color: theme-color('accent', 'dark');
+  }
+
+  .mat-focused {
+    .mat-form-field-underline {
+      background-color: theme-color('accent', 'base') !important;
+
+      .mat-form-field-ripple {
+        background-color: theme-color('accent', 'base') !important;
+      }
+
+    }
+
+  }
+
+  .cdk-overlay-container {
+    z-index: 1200 !important;
+  }
+}
+
+// Primeng autocomplete
+::ng-deep {
+  input[type=text]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid theme-color('primary', 'base');
+    box-shadow: 0 1px 0 0 theme-color('primary', 'base');
+  }
+
+  app-appointment-details app-material-header {
+    height: auto;
+  }
+}
+
+body.modal-open {
+  app-toolbar {
+    z-index: 4 !important;
+  }
+}
+
+app-register-form {
+  width: 75%;
+}
+
+::ng-deep {
+  .mat-calendar-body-selected {
+    background-color: theme-color('accent', 'base');
+    color: white;
+  }
+}
+
+// Overrides materialize style for timepicker dial
+::ng-deep {
+  .timepicker {
+
+    .timepicker__header {
+      background-color: theme-color('accent', 'base') !important;
+
+      .timepicker-dial {
+        position: relative;
+        transition: none;
+      }
+    }
+
+    .timepicker__main-content {
+
+      .timepicker__body {
+
+        .clock-face__number > span.active {
+          background-color: theme-color('accent', 'base') !important;
+        }
+
+        .clock-face__clock-hand {
+          background-color: theme-color('accent', 'base') !important;
+
+          &_minute:before {
+            border-color: theme-color('accent', 'base') !important;
+          }
+        }
+      }
+
+      .timepicker__actions {
+
+        .timepicker-button {
+          color: theme-color('accent', 'base') !important;
+        }
+      }
+    }
+  }
+}
+
+// Sets the overflow to visible for the mat-dialog-container element
+::ng-deep {
+  .mat-dialog-container {
+    overflow: visible;
+  }
+}
+
+// Overwrite material spinner accent color
+::ng-deep {
+  .mat-spinner circle {
+    stroke: theme-color('accent', 'base');
+  }
+}
+

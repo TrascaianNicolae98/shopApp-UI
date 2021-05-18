@@ -1,0 +1,72 @@
+@import 'src/styles/variables';
+
+$horizontalLineColor: theme-color('primary', 'light');
+
+@mixin ellipsis-one-line($width: 100%) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin ellipsis-many-lines($numberOfLines: 2, $lineHeight: 1.2em) {
+  position: relative;
+  overflow: hidden;
+  line-height: $lineHeight;
+  max-height: calc(#{$lineHeight} * #{$numberOfLines});
+  text-align: left;
+  margin-right: -1em;
+  padding-right: 1em;
+  box-sizing: border-box;
+
+  &:before {
+    position: absolute;
+    content: '...';
+    right: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+  }
+}
+
+
+@mixin horizontal-line($height: 1px, $width: 100%, $color: $horizontalLineColor) {
+  height: $height;
+  width: $width;
+  background-color: $color;
+  opacity: 0.2;
+}
+
+@mixin radio-btn {
+  input[type='radio'] {
+    // remove standard background appearance
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    // create custom radiobutton appearance
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    // background-color only for content
+    background-clip: content-box;
+    border: 1px solid theme-color('accent', 'dark');
+    background-color: theme-color('background', 'material');
+    border-radius: 50%;
+    margin-right: 10px;
+    outline: 0;
+  }
+
+  // appearance for checked radiobutton
+  input[type='radio']:checked {
+    background-color: theme-color('accent', 'dark');
+  }
+}

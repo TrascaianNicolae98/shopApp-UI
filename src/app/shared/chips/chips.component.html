@@ -1,0 +1,34 @@
+<mat-form-field>
+  <mat-chip-list #chipList>
+    <mat-chip
+      *ngFor="let record of records"
+      [disabled]="isDisabled()"
+      [selectable]="selectable"
+      [removable]="removable"
+      (removed)="remove(record)">
+      <img class="avatar" *ngIf="hasAvatar" src="{{record?.img}}">
+      {{ display(record) }}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input
+      #chipsInput
+      [placeholder]="label"
+      [disabled]="isDisabled()"
+      [formControl]="recordControl"
+      [required]="required ? '' : null"
+      [matAutocomplete]="auto"
+      [matChipInputFor]="chipList"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur"
+      (matChipInputTokenEnd)="add($event)">
+  </mat-chip-list>
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+    <mat-option *ngFor="let record of filteredRecords | async" [value]="record">
+      {{ display(record) }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+<app-form-error-list
+  *ngIf="showErrors"
+  [errorMap]="formControl.errors">
+</app-form-error-list>

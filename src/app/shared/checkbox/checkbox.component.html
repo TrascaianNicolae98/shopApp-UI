@@ -1,0 +1,10 @@
+<div id = "checkbox">
+  <mat-checkbox #nativeElement
+                class="checkbox"
+                [color]="color"
+                [name]="name"
+                [labelPosition]="labelPosition"
+                [formControl]="control"
+                (change)="onChange($event)">
+  {{label}}</mat-checkbox>
+</div>

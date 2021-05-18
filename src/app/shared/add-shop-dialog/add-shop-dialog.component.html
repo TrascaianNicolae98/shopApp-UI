@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>ADD A SHOP</h1>
+<div mat-dialog-content>
+ <app-input [formControl]="nameFormControl" [label]="'Shop Name'"></app-input>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addShop()">Add</button>
+</mat-dialog-actions>

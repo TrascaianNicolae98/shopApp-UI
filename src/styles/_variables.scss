@@ -1,0 +1,51 @@
+$color-active: #3D9970;
+$color-pending: #FFC107;
+$warning-button: color('amber', 'base') !default;
+$danger-button: color('red', 'base') !default;
+
+$label-font-size: 14px;
+
+// Font
+$font-size-small: 12px;
+
+//padding
+$default-page-padding: 20px;
+
+// Table
+$table-min-height: 400px;
+$table-header-height: 155px;
+$table-header-height-collapse: 90px;
+$table-column-height: 48px;
+$table-footer-height: 48px;
+
+//Pannels
+$default-box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+$z-depth-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+$z-depth-2: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+$z-depth-3: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+$z-depth-4: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+
+$default-panel-background-color: #fff;
+$default-panel-padding: 18px;
+$default_panel_title_font_size: 18px; //24sp
+
+$default-panel-selection-color: lightgray;
+$default-input-padding: 5px;
+
+// Text
+$default-text-bolder-font-weight: 500;
+$default_text_font_size: 15px;
+
+//Material component
+$material-component-header-height: 50px;
+$material-component-footer-height: 50px;
+$material-component-padding: 24px;
+$material-component-min-width: 400px;
+$material-component-min-height: 400px;
+
+// Estimator min width
+$estimatorWidth: 600px;
+
+// Modals dimensions
+$width-medium: 400px;
+

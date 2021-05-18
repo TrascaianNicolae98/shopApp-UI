@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>ADD A PRODUCT</h1>
+<div mat-dialog-content>
+  <app-input [formControl]="productFormGroup.get('name')" [label]="'Product Name'"></app-input>
+  <app-input [formControl]="productFormGroup.get('quantity')" [label]="'Product Quantity'"></app-input>
+</div>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="addProduct()">Add</button>
+</mat-dialog-actions>

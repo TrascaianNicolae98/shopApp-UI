@@ -1,0 +1,15 @@
+
+:host::ng-deep {
+  width: 100%;
+
+  .mat-form-field {
+    width: 100%;
+
+    .mat-input-element {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      margin-bottom: 0;
+      height: 200px;
+    }
+  }
+}

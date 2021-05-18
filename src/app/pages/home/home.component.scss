@@ -1,0 +1,43 @@
+:host{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-around;
+  height: 90%;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .title{
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
+
+    @media screen and (max-width: 992px) {
+      ::ng-deep{
+        app-shop-card{
+          margin: 50px 50px 50px 50px;
+        }
+      }
+    }
+
+
+  }
+
+
+  ::ng-deep{
+    app-mini-fab{
+      position:absolute;
+      bottom:60px;
+      right: 60px;
+    }
+  }
+}

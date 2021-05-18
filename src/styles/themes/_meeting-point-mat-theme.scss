@@ -1,0 +1,75 @@
+@import '../../../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+$meeting-point-primary: (
+  50 : #e5edef,
+  100 : #bfd1d6,
+  200 : #94b3bb,
+  300 : #69949f,
+  400 : #487d8b,
+  500 : #286676,
+  600 : #245e6e,
+  700 : #1e5363,
+  800 : #184959,
+  900 : #0f3846,
+  A100 : #80daff,
+  A200 : #4dcbff,
+  A400 : #1abcff,
+  A700 : #00b5ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$meeting-point-accent: (
+  50 : #fff4e0,
+  100 : #ffe3b3,
+  200 : #ffd080,
+  300 : #ffbd4d,
+  400 : #ffae26,
+  500 : #ffa000,
+  600 : #ff9800,
+  700 : #ff8e00,
+  800 : #ff8400,
+  900 : #ff7300,
+  A100 : #ffffff,
+  A200 : #fff7f2,
+  A400 : #ffd8bf,
+  A700 : #ffc9a6,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #000000,
+    700 : #000000,
+    800 : #000000,
+    900 : #000000,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$meeting-point-primary-palette: mat-palette($meeting-point-primary);
+$meeting-point-accent-palette: mat-palette($meeting-point-accent, 500, 900, A100);
+$meeting-point-warn-palette: mat-palette($mat-red);
+
+$meeting-point-mat-theme: mat-light-theme($meeting-point-primary-palette, $meeting-point-accent-palette, $meeting-point-warn-palette);
+
+@include angular-material-theme($meeting-point-mat-theme);
